@@ -1,7 +1,7 @@
 //MARK: - Reverse String
 
 // Link: https://leetcode.com/problems/reverse-string/
-// Given an integer n, return true if it is a power of three. Otherwise, return false.
+// Write a function that reverses a string. The input string is given as an array of characters s.
 
 
 //MARK: - Approach
