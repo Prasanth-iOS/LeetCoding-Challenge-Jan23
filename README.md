@@ -36,3 +36,5 @@ This repository shows my solution for the Leet Code Problems i have challenged m
 | [Jump Game](https://leetcode.com/problems/jump-game/) | [Swift](https://github.com/Prasanth-iOS/LeetCoding-Challenge-Jan23/blob/main/28_JumpGame_Day15.playground/Contents.swift) | Medium | O(n) | O(1) |
 | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | [Swift](https://github.com/Prasanth-iOS/LeetCoding-Challenge-Jan23/blob/main/29_MergeIntervals_Day16.playground/Contents.swift) | Medium | O(nlogn) | O(n) |
 | [Unique Paths](https://leetcode.com/problems/unique-paths/) | [Swift](https://github.com/Prasanth-iOS/LeetCoding-Challenge-Jan23/blob/main/30_UniquePaths_Day17.playground/Contents.swift) | Medium | O(mn) | O(mn) |
+| [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/) | [Swift](https://github.com/Prasanth-iOS/LeetCoding-Challenge-Jan23/blob/main/31_SetMatrixZeroes_Day18.playground/Contents.swift) | Medium | O(n^2) | O(1) |
+| [Sort Colors](https://leetcode.com/problems/sort-colors/) | [Swift](https://github.com/Prasanth-iOS/LeetCoding-Challenge-Jan23/blob/main/32_SortColors_Day19.playground/Contents.swift) | Medium | O(n) | O(1) |
