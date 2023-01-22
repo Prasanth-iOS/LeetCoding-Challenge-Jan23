@@ -38,3 +38,6 @@ This repository shows my solution for the Leet Code Problems i have challenged m
 | [Unique Paths](https://leetcode.com/problems/unique-paths/) | [Swift](https://github.com/Prasanth-iOS/LeetCoding-Challenge-Jan23/blob/main/30_UniquePaths_Day17.playground/Contents.swift) | Medium | O(mn) | O(mn) |
 | [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/) | [Swift](https://github.com/Prasanth-iOS/LeetCoding-Challenge-Jan23/blob/main/31_SetMatrixZeroes_Day18.playground/Contents.swift) | Medium | O(n^2) | O(1) |
 | [Sort Colors](https://leetcode.com/problems/sort-colors/) | [Swift](https://github.com/Prasanth-iOS/LeetCoding-Challenge-Jan23/blob/main/32_SortColors_Day19.playground/Contents.swift) | Medium | O(n) | O(1) |
+| [Subsets](https://leetcode.com/problems/subsets/) | [Swift](https://github.com/Prasanth-iOS/LeetCoding-Challenge-Jan23/blob/main/33_Subsets_Day20.playground/Contents.swift) | Medium | O(n2^n) | O(n2^n) |
+| [Word Search](https://leetcode.com/problems/word-search/) | [Swift](https://github.com/Prasanth-iOS/LeetCoding-Challenge-Jan23/blob/main/34_WordSearch_Day21.playground/Contents.swift) | Medium | O(mn * 4^l) | O(mn) |
+| [Decode Ways](https://leetcode.com/problems/decode-ways/) | [Swift](https://github.com/Prasanth-iOS/LeetCoding-Challenge-Jan23/blob/main/35_DecodeWays_Day22.playground/Contents.swift) | Medium | O(n) | O(1) |
