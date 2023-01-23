@@ -7,7 +7,7 @@
 //MARK: - Approach
 
 //1. Using queue to hold the next level of traversing items by appending left and right child nodes of nodes at current level, traverse until the queue becomes empty and append values to result. Have an Outer loop to move to next level(same as iterating a 2D matrix).
-//2. 
+//2. Maintain a flag to toggle reverse on every alternate iterations. When set to true, the level should be reversed before appending to result.
 
 
 //MARK: - Complexity
@@ -39,56 +39,31 @@ public class TreeNode {
 }
 
 class Solution {
-    func levelOrder(_ root: TreeNode?) -> [[Int]] {
+    func zigzagLevelOrder(_ root: TreeNode?) -> [[Int]] {
         var result = [[Int]]()
         guard let node = root else {
             return result
         }
+        var queue = [node]
         var isReverse = false
-        var queue = [TreeNode]()
-        queue.append(node)
         while queue.count > 0 {
             var currQueueSize = queue.count
-            var currentLevelRes = [Int]()
+            var currLevelRes = [Int]()
             while currQueueSize > 0 {
-                currentLevelRes.append(queue[0].val)
-                if let left = queue[0].left {
+                let currNode = queue.removeFirst()
+                currLevelRes.append(currNode.val)
+                if let left = currNode.left {
                     queue.append(left)
                 }
-                if let right = queue[0].right {
+                if let right = currNode.right {
                     queue.append(right)
                 }
-                queue.remove(at: 0)
                 currQueueSize -= 1
             }
-            result.append(isReverse ? currentLevelRes.reversed() : currentLevelRes)
+            result.append(isReverse ? currLevelRes.reversed(): currLevelRes)
             isReverse.toggle()
         }
         return result
-    }
-}
-
-// - Recursive Solution
-class RecursiveSolution {
-    func levelOrder(_ root: TreeNode?) -> [[Int]] {
-        var result = [[Int]]()
-        guard let node = root else {
-            return result
-        }
-        traverse(node, 0, &result)
-        return result
-    }
-
-    private func traverse(_ node: TreeNode?, _ level: Int, _ result: inout [[Int]]) {
-        guard let node = node else {
-            return
-        }
-        if result.count == level {
-            result.append([Int]())
-        }
-        result[level].append(node.val)
-        traverse(node.left, level + 1, &result)
-        traverse(node.right, level + 1, &result)
     }
 }
 
@@ -104,7 +79,7 @@ let node1_2 = TreeNode(3)
 head1.left = node1_1
 head1.right = node1_2
 
-solution.levelOrder(head1) // [[2], [3, 1]]
+solution.zigzagLevelOrder(head1) // [[2], [3, 1]]
 
 
 //2. [5,1,4,null,null,3,6]
@@ -119,16 +94,16 @@ head2.right = node2_2
 node2_2.left = node2_3
 node2_2.right = node2_4
 
-solution.levelOrder(head2) // [[5], [4, 1], [3, 6]]
+solution.zigzagLevelOrder(head2) // [[5], [4, 1], [3, 6]]
 
 
 //3. [1]
 let head3 = TreeNode(1)
 
-solution.levelOrder(head3) // [[1]]
+solution.zigzagLevelOrder(head3) // [[1]]
 
 
-//4. [5,1,4,null,null,3,6]
+//4. [5,1,7,6,8,9,1]
 let head4 = TreeNode(5)
 let node4_1 = TreeNode(1)
 let node4_2 = TreeNode(7)
@@ -144,8 +119,8 @@ node4_1.right = node4_4
 node4_2.left = node4_5
 node4_2.right = node4_6
 
-solution.levelOrder(head4) // [[5], [7, 1], [6, 8, 9, 1]]
+solution.zigzagLevelOrder(head4) // [[5], [7, 1], [6, 8, 9, 1]]
 
 
 //5. []
-solution.levelOrder(nil) // []
+solution.zigzagLevelOrder(nil) // []
